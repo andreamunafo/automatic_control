@@ -28,3 +28,10 @@ rc('animation', html='html5')
 
 import dyna.core as core
 from rotate_image import *
+
+
+def L(f):
+    return sympy.laplace_transform(f, t, s, noconds=True)
+
+def invL(F):
+    return sympy.inverse_laplace_transform(F, s, t)
