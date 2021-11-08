@@ -37,8 +37,8 @@ class LinearCar:
         
     def step(self, dt, u, theta):
         self._theta = theta
-        A = np.array([[0, 1], [0, -self._alpha/self._m*abs(self._x_2)-self._beta/self._m]])
-        B = np.array([[0, 0], [self._gamma, -LinearCar._g*np.cos(self._theta)]])
+        A = np.array([[0, 1], [0, -self._beta/self._m]])
+        B = np.array([[0, 0], [self._gamma, -LinearCar._g]])
         
         x = np.array([[self._x_1],[self._x_2]])
         U = np.array([[u],[theta]])
