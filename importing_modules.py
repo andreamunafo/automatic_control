@@ -26,7 +26,7 @@ rc('animation', html='html5')
 # Enable interactive plot
 #%matplotlib notebook
 
-import dyna.core as core
+#import dyna.core as core
 from rotate_image import *
 
 
