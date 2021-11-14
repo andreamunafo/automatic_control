@@ -8,6 +8,7 @@ index = {"Car": "02_Intro_to_control_theory.ipynb",
          "delta": "03_Transfer_functions.ipynb",
          "ramp_as_impulses": "02_Intro_to_control_theory.ipynb",
          "ramp": "03_Transfer_functions.ipynb",
+         "SimplerCar": "04_Block_Diagrams.ipynb",
          "font": "98_Block_diagram_drawings.ipynb",
          "Box": "98_Block_diagram_drawings.ipynb",
          "Arrow": "98_Block_diagram_drawings.ipynb",
@@ -15,6 +16,10 @@ index = {"Car": "02_Intro_to_control_theory.ipynb",
 
 modules = ["intro_to_control_theory.py",
            "transfer_functions.py",
+           "block_diagrams.py",
+           "system_response.py",
+           "frequency_response.py",
+           "steady_state_final_value_theorem.py",
            "block_diagram_drawings.py",
            "core.py"]
 

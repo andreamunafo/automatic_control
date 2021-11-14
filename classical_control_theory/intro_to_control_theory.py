@@ -3,18 +3,9 @@
 __all__ = ['Car', 'LinearCar', 'step', 'delta', 'ramp_as_impulses']
 
 # Cell
-from IPython.display import Image
-from IPython.display import HTML
-
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
-
-# For animations
-from matplotlib import animation, rc
-
-# equivalent to rcParams['animation.html'] = 'html5'
-rc('animation', html='html5')
 
 # Cell
 class Car:
