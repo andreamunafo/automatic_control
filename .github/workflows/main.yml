@@ -13,7 +13,7 @@ jobs:
       uses: FedericoCarboni/setup-ffmpeg@v1
     - name: Install the library
       run: |
-        pip install nbdev jupyter numpy mpmath sympy symengine matplotlib pandas opencv-python 
+        pip install nbdev jupyter numpy mpmath sympy symengine matplotlib pandas opencv-python control
         pip install -e .
     - name: Read all notebooks
       run: |
@@ -26,10 +26,4 @@ jobs:
         nbdev_clean_nbs
         echo "Check that strip out was unnecessary"
         git status -s # display the status to see which nbs need cleaning up
-        if [ -n "$(git status -uno -s)" ]; then echo -e "!!! Detected unstripped out notebooks\n!!!Remember to run nbdev_install_git_hooks"; false; fi
-    - name: Check if there is no diff library/notebooks
-      run: |
-        if [ -n "$(nbdev_diff_nbs)" ]; then echo -e "!!! Detected difference between the notebooks and the library"; false; fi
-    - name: Run tests
-      run: |
-        nbdev_test_nbs
+        if [ -n "$(git status -uno -s)" ]; then echo -e "!!! Detected unstripped out notebooks\n!!!Remember to run nbdev_install_git_hooks"; false; fi    
