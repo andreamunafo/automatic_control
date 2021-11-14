@@ -5,13 +5,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - uses: actions/setup-python@v1
+    - uses: actions/setup-python@v2
       with:
-        python-version: '3.6'
+        python-version: '3.9'
         architecture: 'x64'
+    - name: Setup FFmpeg
+      uses: FedericoCarboni/setup-ffmpeg@v1
     - name: Install the library
       run: |
-        pip install nbdev jupyter
+        pip install nbdev jupyter numpy sympy matplotlib pandas opencv-python
         pip install -e .
     - name: Read all notebooks
       run: |
